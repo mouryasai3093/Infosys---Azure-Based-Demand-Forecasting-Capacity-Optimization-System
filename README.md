@@ -1,52 +1,119 @@
 # Infosys---Azure-Based-Demand-Forecasting-Capacity-Optimization-System
-Project Overview:
 
-This project focuses on forecasting Azure Compute and Storage demand using historical and economic external variables.
+##  Project Overview:
+This project focuses on forecasting Azure cloud demand using time series data and machine learning techniques. The goal is to predict future demand based on historical patterns and improve resource planning.
 
-Dataset:
+---
 
-The dataset contains 18 months of daily Azure service usage data including:
+##  Objectives:
+- Analyze time series demand data
+- Build forecasting models
+- Compare different models
+- Generate predictions for real-world usage
 
-Timestamp
+---
 
-Azure region
+##  Technologies Used:
+- Python
+- Pandas
+- NumPy
+- Matplotlib
+- Scikit-learn
+- XGBoost
+- Statsmodels (ARIMA)
 
-Service type
+---
 
-Demand units
+##  Dataset:
+The dataset contains:
+- Timestamp (date/time)
+- Demand units
+- Azure region
+- Service type
+- Economic indicators (inflation, GDP, etc.)
 
-Capacity allocated
+---
 
-Service availability
+##  Project Workflow
 
-GDP growth rate
+###  Milestone 1: Data Collection & Preprocessing
+- Loaded dataset
+- Handled missing values
+- Converted timestamp to datetime format
 
-Inflation rate
+###  Milestone 2: Feature Engineering & Model Training
+- Created time-based features (year, month, day, etc.)
+- Applied lag features
+- Applied rolling mean
+- Trained Random Forest model
 
-IT sector growth index
+###  Milestone 3: Model Comparison
+- Implemented ARIMA model
+- Implemented XGBoost model
+- Compared models using graphs
+- Evaluated performance using R², MAE, RMSE
 
-Data Preparation:
+###  Milestone 4: Model Integration
+- Generated batch predictions
+- Saved output as `forecast_output.csv`
+- Created a simple dashboard (Actual vs Forecast graph)
+- Explained automation and monitoring concepts
 
-Checked missing values
+---
 
-Removed duplicates
+##  Results
+- Achieved high accuracy with R² score ≈ 0.96
+- XGBoost and Random Forest performed better than ARIMA
+- Forecast closely follows actual demand patterns
 
-Converted timestamp to datetime
+---
 
-Validated logical ranges
+##  Dashboard
+A simple dashboard was created using Python visualization to compare:
+- Actual demand
+- Predicted demand
 
-Added year, month, quarter features
+The output file (`forecast_output.csv`) can be used in tools like Power BI or Tableau for advanced dashboards.
 
-Tools Used:
+---
 
-Python
+##  Applications
+- Cloud resource planning
+- Capacity management
+- Cost optimization
+- Demand prediction
 
-Pandas
+---
 
-Matplotlib
+##  Challenges
+- Handling time series data
+- Feature engineering (lag & rolling mean)
+- Model selection
 
-Google Colab
+---
 
-Conclusion:
+##  Future Scope
+- Real-time prediction system
+- Integration with cloud platforms
+- Advanced dashboards using Power BI
+- Model deployment using APIs
 
-The dataset is cleaned and prepared for forecasting modeling in future milestones.
+---
+
+##  Conclusion
+This project demonstrates how machine learning and time series forecasting can be used to predict cloud demand. The model achieved high accuracy and can be used for efficient decision-making in cloud environments.
+
+---
+
+##  Files Included
+- `notebook.ipynb`
+- `dataset.csv`
+- `forecast_output.csv`
+- `README.md`
+- `LICENSE`
+
+---
+
+##  License
+This project is licensed under the MIT License.
+
